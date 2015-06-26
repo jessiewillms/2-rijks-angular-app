@@ -1,0 +1,15 @@
+<header>
+    <h1>Rijks Museum</h1>
+    <div class="search-box">
+    	<form action="" ng-submit="search($event)">
+    	    <input type="text" ng-model="searchQuery" ng-change="search()">
+    	    <!-- have to call search() function right away here -->
+    	    <input type="submit" value="search">
+    	</form>
+    </div>
+</header>
+<section class="art-work">
+    <!-- this is the $scope -->
+    <art-item ng-repeat="item in artItems" class="art-work" ng-if="item.webImage !== null"></art-item>
+    <!-- the art will populate here -->
+</section>
