@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- initalize an angular app -->
+<!-- 1. make a controller have the domain of the main html tag -> ng-app appname. tell browser app is starting. angualr has access to everything inside of here. -->
+<html lang="en" ng-app="artApp">
+<head>
+	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<title>Angular Test</title>
+	<!-- <link rel="stylesheet" href="style/style.css"> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+	<script src="js/js.js"></script>
+
+	<style>
+	img{max-width: 200px}
+	h3 {
+		background: yellow;
+	}
+	span {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 2px solid #eee;
+	}
+	</style>
+</head>
+<body>
+	<!-- 2. set up a controller | talks w. the JS  -->
+	<!-- controller has to match exactly with what's in the JS -->
+	<main class="main-section">
+		<section ui-view></section>
+	</main>
+</body>
+</html>
