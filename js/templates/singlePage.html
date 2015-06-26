@@ -1,0 +1,32 @@
+<header>
+    <h1>Rijks Museum</h1>
+    <h3>single page</h3>
+</header>
+<section class="art-work">
+    <div class="header">
+        <h2>{{artWork.longTitle}}</h2>
+        <img ng-src="{{artWork.webImage.url}}" alt="{{artWork.title}}"> {{item.webImage.url}}
+    </div>
+    <div class="docs">
+        <h3>Documentation</h3>
+        <ul>
+            <li ng-repeat="item in artWork.documentation" ng-if="artWork.documentation !== null">{{item}}</li>
+        </ul>
+        <ul>
+        	<li>artist info</li>
+        	<li ng-repeat="item in artWork.makers.name" ng-if="artWork.makers.name !== null">{{name}}</li>
+        </ul>
+    </div>
+    <div class="label">
+        <h3>label</h3>
+        <ul>
+            <li ng-repeat="label in artWork.label" ng-if="artWork.label !== null" ng-else="console.log('nothing to see here')">{{label}}</li>
+        </ul>
+    </div>
+    <div class="colors">
+        <h3>colors</h3>
+        <ul>
+            <li ng-repeat="color in artWork.colors" ng-if="artWork.colors !== null" ng-else-if="artWork.colors == null"><span style="background-color:{{color}}"></span>{{color}}</li>
+        </ul>
+    </div>
+</section>
